@@ -1,0 +1,115 @@
+body {
+    min-height: 100vh;
+    background: #ffff no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    background: rgba(255,255,255,0.85);
+    border: 1.5px solid #7fd3e6;
+    border-radius: 18px;
+    box-shadow: 0 4px 32px 0 rgba(46,195,228,0.10);
+    padding: 38px 32px 28px 32px;
+    max-width: 370px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.login-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+    .login-logo img {
+        height: 70px;
+        border-radius: 10px;
+        box-shadow: 0 2px 12px 0 rgba(46,195,228,0.10);
+    }
+
+.login-title {
+    text-align: center;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #009fc6;
+    margin-bottom: 18px;
+    letter-spacing: 0.01em;
+}
+
+.login-form .form-control {
+    background: transparent !important;
+    border: 1.5px solid #7fd3e6;
+    border-radius: 7px;
+    font-size: 1.08rem;
+    margin-bottom: 16px;
+    color: #222;
+    box-shadow: none;
+}
+
+    .login-form .form-control:focus {
+        border-color: #009fc6;
+        box-shadow: 0 0 0 2px #eaf6fa;
+    }
+
+.login-form .form-label {
+    font-weight: 500;
+    color: #009fc6;
+    margin-bottom: 4px;
+}
+
+.login-form .form-check-input {
+    border-radius: 4px;
+    border: 1.5px solid #7fd3e6;
+}
+
+.login-form .btn-login {
+    background: #009fc6;
+    color: #fff;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 1.13rem;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px 0 rgba(46,195,228,0.10);
+    transition: background 0.2s;
+}
+
+    .login-form .btn-login:hover {
+        background: #007fa3;
+    }
+
+.login-form .login-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+    .login-form .login-links a {
+        color: #009fc6;
+        font-size: 0.98rem;
+        text-decoration: none;
+        transition: color 0.2s;
+    }
+
+        .login-form .login-links a:hover {
+            color: #005f7a;
+            text-decoration: underline;
+        }
+
+@media (max-width: 600px) {
+    .login-container {
+        padding: 22px 8px 18px 8px;
+        max-width: 98vw;
+    }
+
+    .login-logo img {
+        height: 48px;
+    }
+}

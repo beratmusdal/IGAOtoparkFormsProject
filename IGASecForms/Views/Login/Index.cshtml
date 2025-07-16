@@ -1,0 +1,58 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giriş Yap - İstanbul Airport</title>
+
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/css/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-logo" style="background:transparent !important; background-color:transparent !important; box-shadow:none !important; padding:0 !important; border-radius:0 !important;">
+            <img src="~/img/bg.png" alt="İstanbul Airport Logo" style="background:transparent !important; background-color:transparent !important; box-shadow:none !important; border-radius:0 !important;">
+        </div>
+
+        <div class="login-title" style="background:transparent !important; background-color:transparent !important; box-shadow:none !important;">Kullanıcı Giriş</div>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+
+        <form class="login-form" method="post" action="/Login/Login">
+            <div class="mb-2">
+                <label for="username" class="form-label">Kullanıcı Adı</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="Kullanıcı adınızı girin" required />
+            </div>
+            <div class="mb-2">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Şifrenizi girin" required />
+            </div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="rememberMe" name="RememberMe" />
+                    <label class="form-check-label" for="rememberMe">Beni Hatırla</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-login">Giriş Yap</button>
+        </form>
+    </div>
+
+    <div id="plane-spinner" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100vw; height:100vh; background:transparent; align-items:center; justify-content:center; backdrop-filter: blur(6px);">
+        <div style="display:flex; flex-direction:column; align-items:center;">
+            <img src="~/assets/spinnergif/plane.gif" alt="Uçak Loader" style="width:300px; height:300px; object-fit:contain; background:transparent; border:none; box-shadow:none;">
+            <div style="margin-top:4px; color:#009fc6; font-weight:600; font-size:2.2rem; letter-spacing:0.02em;">Yükleniyor...</div>
+        </div>
+    </div>
+
+    <script src="~/js/site.js"></script>
+</body>
+</html>
